@@ -37,7 +37,7 @@ public class GUI {
 
 		f = new JFrame("Terningespil");
 		f.setVisible(true);
-		f.setSize(800, 500);
+		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
