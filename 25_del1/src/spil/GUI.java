@@ -37,7 +37,7 @@ public class GUI {
 
 		f = new JFrame("Terningespil");
 		f.setVisible(true);
-		f.setSize(900, 500);
+		f.setSize(800, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -53,8 +53,8 @@ public class GUI {
 		spiller2 = new JLabel(navn2);
 		udskrivPoint1 = new JLabel("0");
 		udskrivPoint2 = new JLabel("0");
-	
-
+		
+		
 		c.gridx = 2;
 		c.gridy = 1;
 		p.add(kast, c);// placering af knappen
