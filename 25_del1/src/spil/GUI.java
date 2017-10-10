@@ -6,6 +6,8 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,8 +22,9 @@ public class GUI {
 
 	private JFrame f; // opretter vinduet for spillet
 	private JButton kast, reset, exit; // opretter knappen for at spille
-
+	private ImageIcon imageIcon1, imageIcon2;
 	private JLabel l, l1, spiller1, spiller2, udskrivPoint1, udskrivPoint2;
+	private JLabel imageLabel1, imageLabel2;
 	// l viser værdien for af hver af de to terninger.
 	// li viser summen af de to terninger.
 	// spiller1 viser navnet på spiller 1.
@@ -58,6 +61,9 @@ public class GUI {
 		udskrivPoint1 = new JLabel("0");
 		udskrivPoint2 = new JLabel("0");
 		
+		
+	
+		
 
 		c.gridx = 2;
 		c.gridy = 1;
@@ -88,12 +94,14 @@ public class GUI {
 		p.add(udskrivPoint2, c); // placering af spiller2's navn
 
 		f.add(p);
+		
 
 		JButton exit = new JButton(" Afslut");
 
 		exit.setBounds(50, 375, 260, 50);
 
 	}
+
 
 	public void exit() {
 		exit.addActionListener(new ActionListener() {
@@ -132,10 +140,23 @@ public class GUI {
 	}
 
 	public void kastTerninger() {
+
 		kast.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
+				
 				terning.random();
+				
+				imageIcon1 = new ImageIcon("die" + terning.getTerning2()+ ".png");
+				imageIcon2 = new ImageIcon("die" + terning.getTerning1()+ ".png");
+				imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
+				imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
+				p.add(imageLabel1);
+				p.add(imageLabel2);
+				f.add(p);
+				imageLabel1.setVisible(true);
+				imageLabel2.setVisible(true);
+				
 				if (runde % 2 == 0) {
 					terning.setPoint2(terning.getSum());
 					Point2();
@@ -158,6 +179,9 @@ public class GUI {
 					reset.setVisible(true);
 					exit.setVisible(true);
 
+					imageLabel1.setVisible(false);
+					imageLabel2.setVisible(false);
+
 				}
 				if (terning.getPoint2() > terning.getPoint1() && terning.getPoint2() >= 40) {
 					JOptionPane.showMessageDialog(null, "TIllykke til " + navn2);
@@ -170,6 +194,9 @@ public class GUI {
 					udskrivPoint2.setVisible(false);
 					reset.setVisible(true);
 					exit.setVisible(true);
+
+					imageLabel1.setVisible(false);
+					imageLabel2.setVisible(false);
 				}
 				runde++;
 			}
