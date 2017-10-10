@@ -19,6 +19,7 @@ public class GUI {
 	JPanel p = new JPanel(new GridBagLayout());
 	GridBagConstraints c = new GridBagConstraints();
 	Terning terning = new Terning(1, 1);
+	
 
 	private JFrame f; // opretter vinduet for spillet
 	private JButton kast, reset, exit; // opretter knappen for at spille
@@ -47,11 +48,14 @@ public class GUI {
 		p.setBackground(new Color(1,50,32));
 		kast = new JButton("KAST MED MIG");
 		kast.setBackground(Color.white);
+		kast.setOpaque(true);
 		reset = new JButton("Reset");
 		reset.setBackground(new Color(99,183,108));
+		reset.setOpaque(true);
 		exit = new JButton("Luk programmet");
 		exit.setBackground(new Color(196,30,58));
 		exit.setVisible(false);
+		exit.setOpaque(true);
 		reset.setVisible(false);
 		l = new JLabel("Kom så - tryk på knappen :-)");
 		l1 = new JLabel("Eller tør du ikke?");
