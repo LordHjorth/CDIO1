@@ -38,7 +38,6 @@ public class GUI {
 	public void frame() {
 
 		f = new JFrame("Terningespil");
-		f.setVisible(true);
 		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -65,7 +64,7 @@ public class GUI {
 		imageIcon2 = new ImageIcon("");
 		imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
 		imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
-
+		f.setVisible(true);
 		// Sætter placering af objekterne
 		c.gridx = 2;
 		c.gridy = 1;
@@ -82,16 +81,16 @@ public class GUI {
 		c.gridx = 2;
 		c.gridy = 12;
 		p.add(imageLabel2, c); // placeringen af summen
-		c.gridx = 0;
+		c.gridx = 1;
 		c.gridy = 1;
 		p.add(spiller1, c); // placering af spiller1's navn
-		c.gridx = 5;
+		c.gridx = 3;
 		c.gridy = 1;
 		p.add(spiller2, c); // placering af spiller2's navn
-		c.gridx = 0;
+		c.gridx = 1;
 		c.gridy = 5;
 		p.add(udskrivPoint1, c); // placering af spiller1's navn
-		c.gridx = 5;
+		c.gridx = 3;
 		c.gridy = 5;
 		p.add(udskrivPoint2, c); // placering af spiller2's navn
 
