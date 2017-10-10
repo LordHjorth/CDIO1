@@ -218,14 +218,14 @@ public class GUI {
 
 	public String Navn1() { // sætter navnet på spiller 1
 
-		navn1 = JOptionPane.showInputDialog(null, "Indtast dit navn", "Terningespil", JOptionPane.PLAIN_MESSAGE);
+		navn1 = JOptionPane.showInputDialog(null, "Spiller 1, Indtast dit navn:", "Terningespil", JOptionPane.PLAIN_MESSAGE);
 		return navn1;
 
 	}
 
 	public String Navn2() { // sætter navnet på spiller 2
 
-		navn2 = JOptionPane.showInputDialog(null, "Indtast dit navn", "Terningespil", JOptionPane.PLAIN_MESSAGE);
+		navn2 = JOptionPane.showInputDialog(null, "Spiller 2, Indtast dit navn:", "Terningespil", JOptionPane.PLAIN_MESSAGE);
 		return navn2;
 	}
 
