@@ -21,7 +21,7 @@ public class GUI {
 	private JFrame f; // opretter vinduet for spillet
 	private JButton kast, reset, exit; // opretter knappen for at spille
 
-	private JLabel l, l1, spiller1, spiller2, udskrivPoint1, udskrivPoint2;
+	private JLabel l, l1, spiller1, spiller2, udskrivPoint1, udskrivPoint2, image;
 	// l viser værdien for af hver af de to terninger.
 	// li viser summen af de to terninger.
 	// spiller1 viser navnet på spiller 1.
@@ -53,6 +53,7 @@ public class GUI {
 		spiller2 = new JLabel(navn2);
 		udskrivPoint1 = new JLabel("0");
 		udskrivPoint2 = new JLabel("0");
+		
 
 		c.gridx = 2;
 		c.gridy = 1;
@@ -174,14 +175,14 @@ public class GUI {
 
 	public String Navn1() { // sætter navnet på spiller 1
 
-		navn1 = JOptionPane.showInputDialog("");
+		navn1 = JOptionPane.showInputDialog(null, "Indtast dit navn", "Terningespil", JOptionPane.PLAIN_MESSAGE);
 		return navn1;
 
 	}
 
 	public String Navn2() { // sætter navnet på spiller 2
-
-		navn2 = JOptionPane.showInputDialog("");
+		
+		navn2 = JOptionPane.showInputDialog(null, "Indtast dit navn", "Terningespil", JOptionPane.PLAIN_MESSAGE);
 		return navn2;
 	}
 
