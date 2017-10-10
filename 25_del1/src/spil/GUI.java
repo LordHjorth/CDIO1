@@ -6,7 +6,6 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -19,7 +18,6 @@ public class GUI {
 	JPanel p = new JPanel(new GridBagLayout());
 	GridBagConstraints c = new GridBagConstraints();
 	Terning terning = new Terning(1, 1);
-	
 
 	private JFrame f; // opretter vinduet for spillet
 	private JButton kast, reset, exit; // opretter knappen for at spille
@@ -38,25 +36,24 @@ public class GUI {
 	private int runde = 1; // viser hvis tur det er.
 
 	public void frame() {
-		
+
 		f = new JFrame("Terningespil");
 		f.setVisible(true);
 		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	
 
-		p.setBackground(new Color(1,50,32));
+		p.setBackground(new Color(1, 50, 32));
 		kast = new JButton("KAST MED MIG");
 		kast.setBackground(Color.white);
-		kast.setOpaque(true);
+
 		reset = new JButton("Reset");
-		reset.setBackground(new Color(99,183,108));
-		reset.setOpaque(true);
+		reset.setBackground(new Color(99, 183, 108));
+
 		exit = new JButton("Luk programmet");
-		exit.setBackground(new Color(196,30,58));
+		exit.setBackground(new Color(196, 30, 58));
 		exit.setVisible(false);
-		exit.setOpaque(true);
+
 		reset.setVisible(false);
 		l = new JLabel("Kom så - tryk på knappen :-)");
 		l1 = new JLabel("Eller tør du ikke?");
@@ -68,10 +65,8 @@ public class GUI {
 		imageIcon2 = new ImageIcon("");
 		imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
 		imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
-		
-		
-		
-		//Sætter placering af objekterne
+
+		// Sætter placering af objekterne
 		c.gridx = 2;
 		c.gridy = 1;
 		p.add(kast, c);// placering af knappen
@@ -101,14 +96,12 @@ public class GUI {
 		p.add(udskrivPoint2, c); // placering af spiller2's navn
 
 		f.add(p);
-		
 
 		JButton exit = new JButton("Afslut");
 
 		exit.setBounds(50, 375, 260, 50);
 
 	}
-
 
 	public void exit() {
 		exit.addActionListener(new ActionListener() {
@@ -151,11 +144,11 @@ public class GUI {
 		kast.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				
+
 				terning.random();
-				
-				imageIcon1 = new ImageIcon("die" + terning.getTerning2()+ ".png");
-				imageIcon2 = new ImageIcon("die" + terning.getTerning1()+ ".png");
+
+				imageIcon1 = new ImageIcon("die" + terning.getTerning2() + ".png");
+				imageIcon2 = new ImageIcon("die" + terning.getTerning1() + ".png");
 				imageLabel1 = new JLabel(imageIcon1);
 				imageLabel2 = new JLabel(imageIcon2);
 				p.add(imageLabel1);
@@ -163,7 +156,7 @@ public class GUI {
 				f.add(p);
 				imageLabel1.setVisible(false);
 				imageLabel2.setVisible(false);
-				
+
 				if (runde % 2 == 0) {
 					terning.setPoint2(terning.getSum());
 					Point2();
@@ -219,7 +212,7 @@ public class GUI {
 	}
 
 	public String Navn2() { // sætter navnet på spiller 2
-		
+
 		navn2 = JOptionPane.showInputDialog(null, "Indtast dit navn", "Terningespil", JOptionPane.PLAIN_MESSAGE);
 		return navn2;
 	}
@@ -235,5 +228,5 @@ public class GUI {
 	public void exit(Object exit) {
 		System.exit(0);
 	}
-	
+
 }
