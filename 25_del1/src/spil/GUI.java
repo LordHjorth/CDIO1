@@ -87,16 +87,16 @@ public class GUI {
 		c.gridx = 2;
 		c.gridy = 12;
 		p.add(imageLabel2, c); // placeringen af summen
-		c.gridx = 1;
+		c.gridx = 0;
 		c.gridy = 1;
 		p.add(spiller1, c); // placering af spiller1's navn
-		c.gridx = 3;
+		c.gridx = 5;
 		c.gridy = 1;
 		p.add(spiller2, c); // placering af spiller2's navn
-		c.gridx = 1;
+		c.gridx = 0;
 		c.gridy = 5;
 		p.add(udskrivPoint1, c); // placering af spiller1's navn
-		c.gridx = 3;
+		c.gridx = 5;
 		c.gridy = 5;
 		p.add(udskrivPoint2, c); // placering af spiller2's navn
 
