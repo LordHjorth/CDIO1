@@ -43,8 +43,11 @@ public class GUI {
 
 		p.setBackground(Color.pink);
 		kast = new JButton("KAST MED MIG");
+		kast.setBackground(Color.GREEN);
 		reset = new JButton("Reset");
+		reset.setBackground(Color.GREEN);
 		exit = new JButton("Luk programmet");
+		exit.setBackground(Color.RED);
 		exit.setVisible(false);
 		reset.setVisible(false);
 		l = new JLabel("Kom så - tryk på knappen :-)");
