@@ -44,6 +44,7 @@ public class GUI {
 		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
 
 		p.setBackground(new Color(1,50,32));
 		kast = new JButton("KAST MED MIG");
