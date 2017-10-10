@@ -41,11 +41,11 @@ public class GUI {
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		p.setBackground(Color.pink);
+		p.setBackground(Color.DARK_GRAY);
 		kast = new JButton("KAST MED MIG");
-		kast.setBackground(Color.GREEN);
+		kast.setBackground(Color.green);
 		reset = new JButton("Reset");
-		reset.setBackground(Color.GREEN);
+		reset.setBackground(Color.green);
 		exit = new JButton("Luk programmet");
 		exit.setBackground(Color.RED);
 		exit.setVisible(false);
@@ -53,6 +53,7 @@ public class GUI {
 		l = new JLabel("Kom så - tryk på knappen :-)");
 		l1 = new JLabel("Eller tør du ikke?");
 		spiller1 = new JLabel(navn1);
+	
 		spiller2 = new JLabel(navn2);
 		udskrivPoint1 = new JLabel("0");
 		udskrivPoint2 = new JLabel("0");
@@ -200,5 +201,5 @@ public class GUI {
 	public void exit(Object exit) {
 		System.exit(0);
 	}
-
+	
 }
