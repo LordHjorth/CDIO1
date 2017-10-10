@@ -15,11 +15,13 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class GUI {
+
+public class GUI1 {
 
 	JPanel p = new JPanel(new GridBagLayout());
 	GridBagConstraints c = new GridBagConstraints();
 	Terning terning = new Terning(1, 1);
+	
 
 	private JFrame f; // opretter vinduet for spillet
 	private JButton kast, reset, exit; // opretter knappen for at spille
@@ -156,7 +158,7 @@ public class GUI {
 			public void actionPerformed(ActionEvent e) {
 
 				terning.random();
-
+				
 				
 
 				if (runde % 2 == 0) {
