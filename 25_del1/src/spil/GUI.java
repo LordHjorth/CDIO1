@@ -56,15 +56,17 @@ public class GUI {
 		l = new JLabel("Kom så - tryk på knappen :-)");
 		l1 = new JLabel("Eller tør du ikke?");
 		spiller1 = new JLabel(navn1);
-	
 		spiller2 = new JLabel(navn2);
 		udskrivPoint1 = new JLabel("0");
 		udskrivPoint2 = new JLabel("0");
+		imageIcon1 = new ImageIcon("");
+		imageIcon2 = new ImageIcon("");
+		imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
+		imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
 		
 		
-	
 		
-
+		//Sætter placering af objekterne
 		c.gridx = 2;
 		c.gridy = 1;
 		p.add(kast, c);// placering af knappen
@@ -76,10 +78,10 @@ public class GUI {
 		p.add(exit, c);// placering af knappen
 		c.gridx = 2;
 		c.gridy = 10;
-		p.add(l, c); // placering af værdien af de to terninger
+		p.add(imageLabel1, c); // placering af værdien af de to terninger
 		c.gridx = 2;
 		c.gridy = 12;
-		p.add(l1, c); // placeringen af summen
+		p.add(imageLabel2, c); // placeringen af summen
 		c.gridx = 1;
 		c.gridy = 1;
 		p.add(spiller1, c); // placering af spiller1's navn
@@ -96,7 +98,7 @@ public class GUI {
 		f.add(p);
 		
 
-		JButton exit = new JButton(" Afslut");
+		JButton exit = new JButton("Afslut");
 
 		exit.setBounds(50, 375, 260, 50);
 
@@ -149,13 +151,13 @@ public class GUI {
 				
 				imageIcon1 = new ImageIcon("die" + terning.getTerning2()+ ".png");
 				imageIcon2 = new ImageIcon("die" + terning.getTerning1()+ ".png");
-				imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
-				imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
+				imageLabel1 = new JLabel(imageIcon1);
+				imageLabel2 = new JLabel(imageIcon2);
 				p.add(imageLabel1);
 				p.add(imageLabel2);
 				f.add(p);
-				imageLabel1.setVisible(true);
-				imageLabel2.setVisible(true);
+				imageLabel1.setVisible(false);
+				imageLabel2.setVisible(false);
 				
 				if (runde % 2 == 0) {
 					terning.setPoint2(terning.getSum());
