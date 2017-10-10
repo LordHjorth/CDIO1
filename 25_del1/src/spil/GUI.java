@@ -37,10 +37,13 @@ public class GUI {
 
 	public void frame() {
 
-		f = new JFrame("Terningespil");
+		f = new JFrame("Terningespil");		
 		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		f.setLocationRelativeTo(null);
+
 
 		p.setBackground(new Color(1, 50, 32));
 		kast = new JButton("KAST MED MIG");
@@ -64,8 +67,12 @@ public class GUI {
 		imageIcon2 = new ImageIcon("");
 		imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
 		imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
-		f.setVisible(true);
-		// Sætter placering af objekterne
+
+		f.setVisible(true); 
+		
+		
+		//Sætter placering af objekterne
+
 		c.gridx = 2;
 		c.gridy = 1;
 		p.add(kast, c);// placering af knappen
