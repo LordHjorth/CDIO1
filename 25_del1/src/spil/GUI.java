@@ -37,17 +37,20 @@ public class GUI {
 	private int runde = 1; // viser hvis tur det er.
 
 	public void frame() {
-
+		
 		f = new JFrame("Terningespil");
 		f.setVisible(true);
 		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		p.setBackground(Color.gray);
+		p.setBackground(Color.pink);
 		kast = new JButton("KAST MED MIG");
+		kast.setBackground(Color.GREEN);
 		reset = new JButton("Reset");
+		reset.setBackground(Color.GREEN);
 		exit = new JButton("Luk programmet");
+		exit.setBackground(Color.RED);
 		exit.setVisible(false);
 		reset.setVisible(false);
 		l = new JLabel("Kom så - tryk på knappen :-)");
