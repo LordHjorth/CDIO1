@@ -58,11 +58,17 @@ public class GUI {
 
 		reset.setVisible(false);
 		l = new JLabel("Kom så - tryk på knappen :-)");
+		l.setForeground(Color.WHITE);
 		l1 = new JLabel("Eller tør du ikke?");
+		l1.setForeground(Color.WHITE);
 		spiller1 = new JLabel(navn1);
+		spiller1.setForeground(Color.WHITE);
 		spiller2 = new JLabel(navn2);
+		spiller2.setForeground(Color.WHITE);
 		udskrivPoint1 = new JLabel("0");
+		udskrivPoint1.setForeground(Color.WHITE);
 		udskrivPoint2 = new JLabel("0");
+		udskrivPoint2.setForeground(Color.WHITE);
 		imageIcon1 = new ImageIcon("");
 		imageIcon2 = new ImageIcon("");
 		imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
@@ -91,10 +97,10 @@ public class GUI {
 		c.gridx = 1;
 		c.gridy = 1;
 		p.add(spiller1, c); // placering af spiller1's navn
-		c.gridx = 3;
+		c.gridx = 3; 
 		c.gridy = 1;
 		p.add(spiller2, c); // placering af spiller2's navn
-		c.gridx = 1;
+		c.gridx = 1; 
 		c.gridy = 5;
 		p.add(udskrivPoint1, c); // placering af spiller1's navn
 		c.gridx = 3;
