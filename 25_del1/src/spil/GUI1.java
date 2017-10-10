@@ -214,6 +214,7 @@ public class GUI1 {
 		return navn1;
 
 	}
+	
 
 	public String Navn2() { // sætter navnet på spiller 2
 
