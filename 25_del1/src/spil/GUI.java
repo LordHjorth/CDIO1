@@ -34,14 +34,14 @@ public class GUI {
 	private int runde = 1; // viser hvis tur det er.
 
 	public void frame() {
-
+		
 		f = new JFrame("Terningespil");
 		f.setVisible(true);
 		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		p.setBackground(Color.gray);
+		p.setBackground(Color.pink);
 		kast = new JButton("KAST MED MIG");
 		reset = new JButton("Reset");
 		exit = new JButton("Luk programmet");

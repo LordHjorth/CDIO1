@@ -2,10 +2,11 @@ package spil;
 
 public class Terningespil {
 
+
 	public static void main(String[] args) {
-
+		
 		GUI gui = new GUI();
-
+		
 
 		gui.Navn1(); // sætter navne ind
 		gui.Navn2();
