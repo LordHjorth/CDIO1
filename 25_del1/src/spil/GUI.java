@@ -44,13 +44,13 @@ public class GUI {
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		p.setBackground(Color.DARK_GRAY);
+		p.setBackground(new Color(1,50,32));
 		kast = new JButton("KAST MED MIG");
-		kast.setBackground(Color.green);
+		kast.setBackground(Color.white);
 		reset = new JButton("Reset");
-		reset.setBackground(Color.green);
+		reset.setBackground(new Color(99,183,108));
 		exit = new JButton("Luk programmet");
-		exit.setBackground(Color.RED);
+		exit.setBackground(new Color(196,30,58));
 		exit.setVisible(false);
 		reset.setVisible(false);
 		l = new JLabel("Kom så - tryk på knappen :-)");
