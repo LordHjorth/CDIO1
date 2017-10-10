@@ -19,10 +19,9 @@ public class Terning {
 	}
 	
 	
-
 	public void random() {
 		terning1 = random.nextInt(6) + 1;
-		terning2 = random.nextInt(6) + 1; 
+		terning2 = random.nextInt(6) + 1;
 	}
 
 	public int getSum() {

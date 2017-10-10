@@ -13,8 +13,10 @@ public class Terningespil {
 		gui.frame(); // Oprette GUI'en
 		
 		gui.kastTerninger();
+		
 		gui.reset();
-		//gui.exit();
+		
+		gui.exit();
 
 
 		

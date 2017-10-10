@@ -37,7 +37,7 @@ public class GUI {
 
 		f = new JFrame("Terningespil");
 		f.setVisible(true);
-		f.setSize(800, 500);
+		f.setSize(900, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -53,8 +53,7 @@ public class GUI {
 		spiller2 = new JLabel(navn2);
 		udskrivPoint1 = new JLabel("0");
 		udskrivPoint2 = new JLabel("0");
-		
-		
+
 		c.gridx = 2;
 		c.gridy = 1;
 		p.add(kast, c);// placering af knappen
@@ -84,18 +83,24 @@ public class GUI {
 		p.add(udskrivPoint2, c); // placering af spiller2's navn
 
 		f.add(p);
+
+		JButton exit = new JButton(" Afslut");
+
+		exit.setBounds(50, 375, 260, 50);
+
 	}
-/*
+
 	public void exit() {
-		reset.addActionListener(new ActionListener() {
+		exit.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				f.dispose();
+				exit.setVisible(false);
+				exit.setVisible(false);
+				System.exit(0);
 			}
 		});
 	}
-*/ //virker ikke
-	
+
 	public void reset() {
 		reset.addActionListener(new ActionListener() {
 
@@ -116,7 +121,6 @@ public class GUI {
 				udskrivPoint2.setVisible(true);
 				reset.setVisible(false);
 				exit.setVisible(false);
-
 			}
 
 		});
@@ -137,8 +141,8 @@ public class GUI {
 				l.setText(terning.getTerning2() + " og " + terning.getTerning1());
 				l1.setText("Summen er " + terning.getSum());
 
-				if (terning.getPoint1() > terning.getPoint2() && terning.getPoint1() > 40) {
-					System.out.println("TILLYKKE TIL " + navn1.toUpperCase());
+				if (terning.getPoint1() > terning.getPoint2() && terning.getPoint1() >= 40) {
+					JOptionPane.showMessageDialog(null, "TIllykke til " + navn1);
 					kast.setVisible(false);
 					l.setVisible(false);
 					l1.setVisible(false);
@@ -150,8 +154,8 @@ public class GUI {
 					exit.setVisible(true);
 
 				}
-				if (terning.getPoint2() > terning.getPoint1() && terning.getPoint2() > 40) {
-					System.out.println("TILLYKKE TIL " + navn2.toUpperCase());
+				if (terning.getPoint2() > terning.getPoint1() && terning.getPoint2() >= 40) {
+					JOptionPane.showMessageDialog(null, "TIllykke til " + navn2);
 					kast.setVisible(false);
 					l.setVisible(false);
 					l1.setVisible(false);
@@ -179,17 +183,18 @@ public class GUI {
 
 		navn2 = JOptionPane.showInputDialog("");
 		return navn2;
-
 	}
 
 	public void Point1() { // udskriver point for spiller 1 i label udskrivPoint1
 		udskrivPoint1.setText(Integer.toString(terning.getPoint1()));
-
 	}
 
 	public void Point2() { // udskriver point for spiller 2 i label udskrivPoint2
 		udskrivPoint2.setText(Integer.toString(terning.getPoint2()));
+	}
 
+	public void exit(Object exit) {
+		System.exit(0);
 	}
 
 }
