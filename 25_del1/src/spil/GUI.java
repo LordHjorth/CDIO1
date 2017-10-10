@@ -1,8 +1,10 @@
 package spil;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -38,11 +40,12 @@ public class GUI {
 	public void frame() {
 
 		f = new JFrame("Terningespil");		
-		f.setSize(900, 500);
+		f.setSize(500, 500);
 		f.getBackground();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		f.setLocationRelativeTo(null);
+		f.getContentPane().add(p, BorderLayout.NORTH);
 
 
 		p.setBackground(new Color(1, 50, 32));
@@ -69,18 +72,18 @@ public class GUI {
 		udskrivPoint1.setForeground(Color.WHITE);
 		udskrivPoint2 = new JLabel("0");
 		udskrivPoint2.setForeground(Color.WHITE);
-		imageIcon1 = new ImageIcon("");
-		imageIcon2 = new ImageIcon("");
+		imageIcon1 = new ImageIcon("die1");
+		imageIcon2 = new ImageIcon("die2");
 		imageLabel1 = new JLabel(imageIcon1, JLabel.CENTER);
 		imageLabel2 = new JLabel(imageIcon2, JLabel.CENTER);
 
-		f.setVisible(true); 
+		 
 		
 		
 		//Sætter placering af objekterne
-
-		c.gridx = 2;
-		c.gridy = 1;
+		c.insets = new Insets(50, 50, 50, 50);
+		c.gridx = 250;
+		c.gridy = 0;
 		p.add(kast, c);// placering af knappen
 		c.gridx = -1;
 		c.gridy = 1;
@@ -88,23 +91,17 @@ public class GUI {
 		c.gridx = 1;
 		c.gridy = 1;
 		p.add(exit, c);// placering af knappen
-		c.gridx = 2;
-		c.gridy = 10;
-		p.add(imageLabel1, c); // placering af værdien af de to terninger
-		c.gridx = 2;
-		c.gridy = 12;
-		p.add(imageLabel2, c); // placeringen af summen
-		c.gridx = 1;
-		c.gridy = 1;
+		c.gridx = 50;
+		c.gridy = 0;
 		p.add(spiller1, c); // placering af spiller1's navn
-		c.gridx = 3; 
-		c.gridy = 1;
+		c.gridx = 450; 
+		c.gridy = 0;
 		p.add(spiller2, c); // placering af spiller2's navn
-		c.gridx = 1; 
-		c.gridy = 5;
+		c.gridx = 50; 
+		c.gridy = 100;
 		p.add(udskrivPoint1, c); // placering af spiller1's navn
-		c.gridx = 3;
-		c.gridy = 5;
+		c.gridx = 450;
+		c.gridy = 100;
 		p.add(udskrivPoint2, c); // placering af spiller2's navn
 
 		f.add(p);
@@ -112,6 +109,7 @@ public class GUI {
 		JButton exit = new JButton("Afslut");
 
 		exit.setBounds(50, 375, 260, 50);
+		f.setVisible(true);
 
 	}
 
@@ -159,15 +157,7 @@ public class GUI {
 
 				terning.random();
 
-				imageIcon1 = new ImageIcon("die" + terning.getTerning2() + ".png");
-				imageIcon2 = new ImageIcon("die" + terning.getTerning1() + ".png");
-				imageLabel1 = new JLabel(imageIcon1);
-				imageLabel2 = new JLabel(imageIcon2);
-				p.add(imageLabel1);
-				p.add(imageLabel2);
-				f.add(p);
-				imageLabel1.setVisible(false);
-				imageLabel2.setVisible(false);
+				
 
 				if (runde % 2 == 0) {
 					terning.setPoint2(terning.getSum());
