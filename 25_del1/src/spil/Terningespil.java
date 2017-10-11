@@ -72,7 +72,7 @@ public class Terningespil {
             }
             runde++;
             
-        } while ((terning.getPoint1() < 40) && (terning.getPoint2() < 40));
+        } while ((terning.getPoint1() < 45) && (terning.getPoint2() < 40));
 
         if (terning.getPoint1() > terning.getPoint2()) {
             GUI.showMessage("TILLYKKEEEEEEEE TIL "+spiller1.toUpperCase());
