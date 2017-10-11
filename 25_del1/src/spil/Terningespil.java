@@ -75,17 +75,17 @@ public class Terningespil {
         } while ((terning.getPoint1() < 40) && (terning.getPoint2() < 40));
 
         if (terning.getPoint1() > terning.getPoint2()) {
-            GUI.showMessage("TILLYKKEEEEEEEE TIL "+spiller1.toUpperCase());
-   		 	
+            GUI.showMessage("TILLYKKETIL "+spiller1.toUpperCase());
+          
             Board.destroy();
 
-        }
+        
         if (terning.getPoint2() > terning.getPoint1()) {
-        	GUI.showMessage("TILLYKKEEEEEEEE TIL "+spiller2.toUpperCase());
+        	GUI.showMessage("TILLYKKE TIL "+spiller2.toUpperCase());
         	Board.destroy();
 
         }
         
     }
 
-}
+}}
