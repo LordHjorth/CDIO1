@@ -75,7 +75,7 @@ public class Terningespil {
         } while ((terning.getPoint1() < 40) && (terning.getPoint2() < 40));
 
         if (terning.getPoint1() > terning.getPoint2()) {
-            GUI.showMessage("TILLYKKETIL "+spiller1.toUpperCase());
+            GUI.showMessage("TILLYKKE TIL "+spiller1.toUpperCase());
           
             Board.destroy();
 
