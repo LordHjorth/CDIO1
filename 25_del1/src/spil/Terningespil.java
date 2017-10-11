@@ -29,7 +29,7 @@ public class Terningespil {
 		fields[3] = new Empty.Builder().build();
 		fields[4] = new Street.Builder().setBgColor(Color.blue).setDescription(spiller1 + "'s point").setTitle(spiller1).setSubText("0").build(); 
 		// spiller 1's felt
-		fields[5] = new Empty.Builder().build();
+		fields[5] = new Street.Builder().setBgColor(Color.green).setTitle("Summen").setSubText("0").build(); 
 		fields[6] = new Street.Builder().setBgColor(Color.red).setDescription(spiller2 + "'s point").setTitle(spiller2).setSubText("0").build(); 
 		// Spiller 2's felt
 
@@ -59,8 +59,10 @@ public class Terningespil {
 					terning.setPoint2(terning.getSum()); // Overfører pointene for nuværende runde til samlede point
 					fields[6].setSubText(Integer.toString(terning.getPoint2())); // Indsætter pointene i feltet for spiller 2
 					fields[6].displayOnCenter(); // Fremhæver spiller 1's field i midten af skærmen. I GUI's 'center'.
+					
 				}
 
+				fields[5].setSubText(Integer.toString(terning.getSum()));
 				runde++;
 
 			}
