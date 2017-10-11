@@ -20,6 +20,7 @@ public class Terningespil {
     	Field[] fields=new Field[1];
     	fields[0]=new Empty.Builder().build();
     	GUI.create(fields);
+    	
         Terning terning = new Terning(0, 0);
         String spiller1,spiller2;
         spiller1=JOptionPane.showInputDialog("Indtast navn, Spiller 1");
