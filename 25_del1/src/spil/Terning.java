@@ -26,7 +26,7 @@ public class Terning {
 		terning2 = random.nextInt(6) + 1;
 	}
 	
-	public int getSum() { //sætter summen af de to terninger
+	public int getSum() { //sætter og returnerer summen af de to terninger
 		sum = terning1 + terning2;
 		return sum;
 	}
@@ -39,7 +39,7 @@ public class Terning {
 		return terning2;
 	}
 
-	public int setPoint1(int nyePoint) { //Bruges til at sætte pointene for spiller 1. Deraf Point1
+	public int setPoint1(int nyePoint) { //Bruges til at sætte pointene for spiller 1. Deraf Point1. Returnerer de nye point
 		return point1 = point1 + nyePoint;
 	}
 
@@ -51,7 +51,7 @@ public class Terning {
 		point1 = 0;
 	}
 	
-	public int setPoint2(int nyePoint) { //Bruges til at sætte pointene for spiller 2. Deraf Point2
+	public int setPoint2(int nyePoint) { //Bruges til at sætte pointene for spiller 2. Deraf Point2. Returnerer de nye point
 		return point2 = point2 + nyePoint;
 	}
 
@@ -63,12 +63,12 @@ public class Terning {
 		point2 = 0;
 	}
 	
-	public String getSpiller1() { //Finder navnet for spiller1 vha. JOptionPane.showInputDialog.
+	public String getSpiller1() { //Finder og returnerer navnet for spiller1 vha. JOptionPane.showInputDialog.
 		navn1 = JOptionPane.showInputDialog("Indtast navn, Spiller 1");
 		return navn1;
 	}
 	
-	public String getSpiller2() {//Finder navnet for spiller2 vha. JOptionPane.showInputDialog.
+	public String getSpiller2() { //Finder og returnerer navnet for spiller2 vha. JOptionPane.showInputDialog.
 		navn2 = JOptionPane.showInputDialog("Indtast navn, Spiller 2");
 		return navn2;
 	}
