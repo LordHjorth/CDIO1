@@ -18,8 +18,8 @@ public class Terningespil {
 		Terning terning = new Terning(0, 0);
 
 		String spiller1, spiller2;
-		spiller1 = terning.getSpiller1();
-		spiller2 = terning.getSpiller2();
+		spiller1 = terning.getSpiller1(); //henter spiller1 
+		spiller2 = terning.getSpiller2(); //henter spiller2
 
 		Field[] fields = new Field[7]; //Sætter felterne på spillepladen op.
 
@@ -39,9 +39,9 @@ public class Terningespil {
 
 		while (true) {
 
-			int runde = 1;
+			int runde = 1; //spiller starter ved runde = 1, derfor starter spiller 1.
 
-			while ((terning.getPoint1() < 40) && (terning.getPoint2() < 40)) {
+			while ((terning.getPoint1() < 40) && (terning.getPoint2() < 40)) { // kører indtil ind af spillerne har 40 point
 
 				if (runde % 2 != 0) { // Hvis det er en ulige runde, er det spiller 1's tur. 2 går derfor ikke op i antallet af runder
 					GUI.getUserButtonPressed("Din tur " + spiller1, "Kast terningerne");
@@ -62,8 +62,8 @@ public class Terningespil {
 					
 				}
 
-				fields[5].setSubText(Integer.toString(terning.getSum()));
-				runde++;
+				fields[5].setSubText(Integer.toString(terning.getSum())); //printer summen er det nyeste slag
+				runde++; //inkrementerer intergeren 'runde' for at give turen videre til næste spiller
 
 			}
 
