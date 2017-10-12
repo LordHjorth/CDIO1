@@ -44,7 +44,7 @@ public class Terningespil {
 			while ((terning.getPoint1() < 40) && (terning.getPoint2() < 40)) { // kører indtil ind af spillerne har 40 point
 
 				if (runde % 2 != 0) { // Hvis det er en ulige runde, er det spiller 1's tur. 2 går derfor ikke op i antallet af runder
-					GUI.getUserButtonPressed("Din tur " + spiller1, "Kast terningerne");
+					GUI.getUserButtonPressed("Din tur " + spiller1, "Kast terningerne"); //opretter en knap for at kaste med terningerne
 					terning.random(); // kaster terningerne
 					GUI.setDice(terning.getTerning1(), terning.getTerning2());// Sætter GUI'ens terningerne til at vise værdierne
 					terning.setPoint1(terning.getSum()); // Overfører pointene for nuværende runde til samlede point
@@ -53,7 +53,7 @@ public class Terningespil {
 				}
 
 				if (runde % 2 == 0) { // Hvis runde modulus 2 er lig 0, så er det spiller 2s tur,
-					GUI.getUserButtonPressed("Din tur " + spiller2, "Kast terningerne");
+					GUI.getUserButtonPressed("Din tur " + spiller2, "Kast terningerne"); //opretter en knap for at kaste med terningerne
 					terning.random(); // kaster terningerne
 					GUI.setDice(terning.getTerning1(), terning.getTerning2()); // Sætter GUI'ens terningerne til at vise værdierne
 					terning.setPoint2(terning.getSum()); // Overfører pointene for nuværende runde til samlede point
