@@ -8,8 +8,6 @@ import java.awt.Color;
 import desktop_fields.*;
 import desktop_resources.GUI;
 
-//import java.util.*;
-//import java.lang.*;
 
 public class Terningespil {
 
