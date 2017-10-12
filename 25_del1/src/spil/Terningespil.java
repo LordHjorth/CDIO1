@@ -67,14 +67,14 @@ public class Terningespil {
 
 			}
 			
-			if (terning.getPoint1() > terning.getPoint2()) {
+			if (terning.getPoint1() > terning.getPoint2()) { //Hvis det er spiller 1, der har vundet
 				GUI.getUserButtonPressed("TILLYKKE TIL " + spiller1.toUpperCase() + " MED SEJEREN", "Prøv igen?");
 				terning.nulstilPoint1(); // nulstiller point for at starte forfra.
 				terning.nulstilPoint2(); // nulstiller point for at starte forfra.
 				fields[4].setSubText("0"); //sætter de samlede point (skrevet i subtext) til 0, da spillet startes forfra
 				fields[6].setSubText("0"); //sætter de samlede point (skrevet i subtext) til 0, da spillet startes forfra
 			}
-			if (terning.getPoint2() > terning.getPoint1()) {
+			if (terning.getPoint2() > terning.getPoint1()) { //Hvis det er spiller 2, der har vundet
 				GUI.getUserButtonPressed("TILLYKKE TIL " + spiller2.toUpperCase() + " MED SEJEREN", "Prøv igen?");
 				terning.nulstilPoint1(); // nulstiller point for at starte forfra.
 				terning.nulstilPoint2(); // nulstiller point for at starte forfra.
